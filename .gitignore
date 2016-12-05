@@ -1,0 +1,11 @@
+# dependencies
+node_modules
+
+# WebStorm configuration
+.idea
+
+# build
+dist
+
+# user upload
+public
