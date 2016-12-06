@@ -3,8 +3,8 @@ import express from 'express';
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
     res.json({message: 'Being implemented'});
 });
 
-module.exports = router;
+export default router;

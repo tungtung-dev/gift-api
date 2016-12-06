@@ -3,5 +3,9 @@
  */
 import userRoute from './users';
 import commonRoute from './common';
+import categoryRoute from './category';
+import productRoute from './product';
+import transactionRoute from './transaction';
+import cardRoute from './card';
 
-export default {userRoute, commonRoute}
+export default {userRoute, commonRoute, categoryRoute, productRoute, transactionRoute, cardRoute}

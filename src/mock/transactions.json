@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "gift": [
+        {
+          "_id": "583eaa9775c8055dfe401d5b",
+          "name": "Nhà giáo Việt Nam",
+          "slug": "nha-giao-viet-nam",
+          "description": "Quà giáng sinh nè mấy gái!",
+          "content": "Mô tả",
+          "icon": "nha-giao-viet-name.png",
+          "featuredImage": {
+            "image": "nha-giao-viet-name.png"
+          },
+          "secondaryFeaturedImage": {
+            "image": "nha-giao-viet-name.png"
+          },
+          "customField": "customField",
+          "updatedAt": "2016-12-05T07:11:20.980Z",
+          "createdAt": "2016-11-30T10:31:51.525Z",
+          "categories": [
+            {
+              "_id": "583eabfbb845615e5f84ecd6",
+              "name": "Giáng sinh",
+              "slug": "giang-sinh",
+              "index": "1",
+              "icon": "birthday-gift.png",
+              "featuredImage": {
+                "image": "birthday-gift-featured.png"
+              },
+              "secondaryFeaturedImage": {
+                "image": "birthday-gift-featured-2.png"
+              },
+              "customField": "customField",
+              "updatedAt": "2016-12-05T07:11:20.977Z",
+              "createdAt": "2016-11-30T10:37:47.266Z",
+              "id": "583eabfbb845615e5f84ecd6"
+            }
+          ],
+          "id": "583eaa9775c8055dfe401d5b"
+        }
+      ],
+      "card": {
+        "_id": "583eabfbb845615e5f84ecd6",
+        "name": "Giáng sinh",
+        "slug": "giang-sinh",
+        "index": "1",
+        "icon": "birthday-gift.png",
+        "featuredImage": {
+          "image": "birthday-gift-featured.png"
+        },
+        "secondaryFeaturedImage": {
+          "image": "birthday-gift-featured-2.png"
+        },
+        "customField": "customField",
+        "updatedAt": "2016-12-05T07:11:20.977Z",
+        "createdAt": "2016-11-30T10:37:47.266Z",
+        "categories": [
+          {
+            "_id": "583eabfbb845615e5f84ecd6",
+            "name": "Giáng sinh",
+            "slug": "giang-sinh",
+            "index": "1",
+            "icon": "birthday-gift.png",
+            "featuredImage": {
+              "image": "birthday-gift-featured.png"
+            },
+            "secondaryFeaturedImage": {
+              "image": "birthday-gift-featured-2.png"
+            },
+            "customField": "customField",
+            "updatedAt": "2016-12-05T07:11:20.977Z",
+            "createdAt": "2016-11-30T10:37:47.266Z",
+            "id": "583eabfbb845615e5f84ecd6"
+          },
+          {
+            "_id": "583eabfbb845615e5f84ecd6",
+            "name": "Sinh nhật",
+            "slug": "sinh-nhat",
+            "index": "1",
+            "icon": "birthday-gift.png",
+            "featuredImage": {
+              "image": "birthday-gift-featured.png"
+            },
+            "secondaryFeaturedImage": {
+              "image": "birthday-gift-featured-2.png"
+            },
+            "customField": "customField",
+            "updatedAt": "2016-12-05T07:11:20.977Z",
+            "createdAt": "2016-11-30T10:37:47.266Z",
+            "id": "583eabfbb845615e5f84ecd6"
+          }
+        ],
+        "id": "583eabfbb845615e5f84ecd6"
+      },
+      "user": "583eabfbb845615e5f84ecd6",
+      "updatedAt": "2016-12-05T07:11:20.980Z",
+      "createdAt": "2016-11-30T10:31:51.525Z",
+      "id": "583eabfbb845615e5f84ecd6"
+    }
+  ],
+  "pagination": {
+    "totalItem": 1,
+    "page": 1,
+    "itemPerPage": 10,
+    "minIndex": 0,
+    "maxIndex": 10
+  }
+}
