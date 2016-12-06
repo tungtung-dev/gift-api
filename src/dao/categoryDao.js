@@ -1,7 +1,7 @@
 /**
  * Created by Tien Nguyen on 11/30/16.
  */
-import {Category} from '../model/index';
+import {Category} from '../models/index';
 import Pagination from 'pagination-js';
 
 /**

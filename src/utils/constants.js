@@ -3,9 +3,16 @@
  */
 
 export const transactionState = {
-    DRAFT: "POST_STATE_DRAFT",
-    PUBLIC: "POST_STATE_PUBLIC",
-    TRASH: "POST_STATE_TRASH"
+    DRAFT: "trans_state_draft",
+    PUBLIC: "trans_state_draft",
+    TRASH: "trans_state_draft"
+};
+
+
+export const productState = {
+    DRAFT: "trans_state_draft",
+    PUBLIC: "trans_state_draft",
+    TRASH: "trans_state_draft"
 };
 
 export const giftOrderByType = {
