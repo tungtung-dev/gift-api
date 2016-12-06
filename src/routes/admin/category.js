@@ -1,26 +1,68 @@
-import express from 'express';
-import categoryMock from '../../mock/categories.json';
+import express from "express";
+import {getCategoryRoute, getAllCategoriesRoute, getPaginatedCategoriesRoute} from "../user/category";
+import {convertData} from "common-helper";
+import {saveCategory, updateCategory, deleteCategory} from "../../dao/categoryDao";
+import {showResultToClient} from "../../utils/responseUtils";
+import {isObjectId} from "../../utils/objectIdUtils";
+import slug from 'slug';
 
 var router = express.Router();
 
-router.get('/', function (req, res) {
-    res.json(categoryMock);
-});
+router.get('/', getPaginatedCategoriesRoute);
 
 router.post('/', function (req, res) {
-    res.json(categoryMock[0]);
+    let data = convertData(req.body, {
+        name: {$get: true, $default: "untitled"},
+        slug: {
+            $update: (value, objectData) => {
+                return slug(objectData.name.toLowerCase());
+            }
+        },
+        index: {$get: true, $default: 1},
+        icon: {$get: true},
+        featuredImage: {$get: true},
+        secondaryFeaturedImage: {$get: true},
+        customField: {$get: true}
+    });
+    saveCategory(data, (err, data) => {
+        showResultToClient(err, data, res);
+    });
 });
 
-router.get('/:categoryKey', function (req, res) {
-    res.json(categoryMock[0]);
-});
+router.get('/without-pagination', getAllCategoriesRoute);
+
+router.get('/:categoryKey', getCategoryRoute);
 
 router.put('/:categoryKey', function (req, res) {
-    res.json(categoryMock[0]);
+    let {categoryKey} = req.params;
+    let isId = isObjectId(categoryKey);
+    let queryObj = isId ? {_id: categoryKey} : {slug: categoryKey};
+    let data = convertData(req.body, {
+        name: {$get: true},
+        slug: {
+            $update: (value, objectData) => {
+                return objectData.name ? slug(objectData.name.toLowerCase()) : value;
+            }
+        },
+        index: {$get: true},
+        icon: {$get: true},
+        featuredImage: {$get: true},
+        secondaryFeaturedImage: {$get: true},
+        customField: {$get: true},
+        updatedAt: {$get: true, default: new Date()}
+    });
+    updateCategory(queryObj, data, (err, data) => {
+        showResultToClient(err, data, res);
+    });
 });
 
 router.delete('/:categoryKey', function (req, res) {
-    res.json(categoryMock[0]);
+    let {categoryKey} = req.params;
+    let isId = isObjectId(categoryKey);
+    let queryObj = isId ? {_id: categoryKey} : {slug: categoryKey};
+    deleteCategory(queryObj, (err, data) => {
+        showResultToClient(err, data, res);
+    });
 });
 
 export default router;
