@@ -1,5 +1,5 @@
 export default {
-    'secret': 'tungtung-media-starter/starter',
+    'secret': 'tungtung-gift/gift',
     'database': 'mongodb://127.0.0.1:27017/gift',
     'dbOptions': {
         'db': {'native_parser': true},

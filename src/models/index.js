@@ -4,6 +4,7 @@
 import Category from './category';
 import Product from './product';
 import Card from './card';
+import User from './user';
 
-export {Category, Product, Card}
-export default {Category, Product, Card}
+export {Category, Product, Card, User}
+export default {Category, Product, Card, User}
