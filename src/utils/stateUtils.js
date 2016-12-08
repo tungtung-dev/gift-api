@@ -1,7 +1,7 @@
 /**
  * Created by Tien Nguyen on 11/22/16.
  */
-import {Post} from 'models/index';
+import {Product} from 'models/index';
 import {productState} from "./constants";
 
 
@@ -27,10 +27,12 @@ export function getCorrectState(inputState = productState.DRAFT) {
  * @param postQuery
  */
 export async function getCorrectStateAsync(inputState = productState.DRAFT, postQuery) {
-    let post = await Post.findOne(postQuery).exec();
+    console.log("Start");
     let state = productState.DRAFT;
-    console.log("Post state = " + post.state);
     try {
+        let post = await Product.findOne(postQuery).exec();
+        console.log("Post state = " + post.state);
+
         switch (inputState) {
             case productState.DRAFT:
             case productState.PUBLIC:

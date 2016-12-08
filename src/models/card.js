@@ -12,7 +12,7 @@ var cardSchema = new mongoose.Schema({
     customField: {},
     featuredImage: {},
     secondaryFeaturedImage: {},
-    categoryId: [{type: Schema.ObjectId, ref: 'category'}],
+    categories: [{type: Schema.ObjectId, ref: 'category'}],
     createdAt: {type: Date, default: Date.now},
     updatedAt: {type: Date, default: Date.now}
 });

@@ -106,20 +106,19 @@ export function getProducts(category = "", keyword = "", state = [ProductState.P
 
 /**
  * Save Product data
- * @param ProductData
- * @param tags
+ * @param productData
  * @param callback
  */
-export function saveProduct(ProductData, tags, callback) {
+export function saveProduct(productData, callback) {
     (async() => {
         try {
-            let categoryCount = await Category.count({_id: ProductData.categoryId}).exec();
-            if (categoryCount > 0) {
-                let Product = new Product(ProductData);
-                await Product.save();
-                Product.populate(Product, {path: 'tags owner', select: {password: 0}}, callback);
+            let categoryCount = await Category.count({_id: {$in: productData.categories}}).exec();
+            if (categoryCount > 0 && categoryCount === productData.categories.length) {
+                let product = new Product(productData);
+                await product.save(callback);
+                Product.populate(product, {path: 'categories'}, callback);
             } else {
-                callback(new Error('Please check the categoryId field'));
+                callback(new Error('Please check the categories field'));
             }
         } catch (err) {
             callback(err);
@@ -136,12 +135,12 @@ export function saveProduct(ProductData, tags, callback) {
 export function updateProduct(queryObj, productData, callback) {
     (async() => {
         try {
-            let categoryCount = await Category.count({_id: productData.categoryId}).exec();
+            let categoryCount = await Category.count({_id: {$in: productData.categories}}).exec();
             console.log("categoryCount " + categoryCount);
-            if (productData.categoryId === undefined || productData.categoryId === null || categoryCount > 0) {
+            if (productData.categories === undefined || productData.categories === null
+                || (categoryCount > 0 && categoryCount === productData.categories.length)) {
                 Product.findOneAndUpdate(queryObj, {$set: productData}, {new: true})
-                    .populate({path: 'tags'})
-                    .populate({path: 'owner', select: {password: 0}})
+                    .populate({path: 'categories'})
                     .exec(callback);
             } else {
                 callback(new Error('Please check the categoryId field'));
@@ -154,11 +153,11 @@ export function updateProduct(queryObj, productData, callback) {
 
 /**
  * Delete Product by slug
- * @param slug slug from request
+ * @param queryObj slug from request
  * @param callback
  */
-export function deleteProductBySlug(slug, callback) {
-    Product.findOneAndRemove({slug: slug})
+export function deleteProductBySlug(queryObj, callback) {
+    Product.findOneAndRemove(queryObj)
         .exec(callback);
 }
 

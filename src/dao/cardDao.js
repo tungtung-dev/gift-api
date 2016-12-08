@@ -106,20 +106,19 @@ export function getCards(category = "", keyword = "", state = [CardState.PUBLIC]
 
 /**
  * Save Card data
- * @param CardData
- * @param tags
+ * @param cardData
  * @param callback
  */
-export function saveCard(CardData, tags, callback) {
+export function saveCard(cardData, callback) {
     (async() => {
         try {
-            let categoryCount = await Category.count({_id: CardData.categoryId}).exec();
-            if (categoryCount > 0) {
-                let Card = new Card(CardData);
-                await Card.save();
-                Card.populate(Card, {path: 'tags owner', select: {password: 0}}, callback);
+            let categoryCount = await Category.count({_id: {$in: cardData.categories}}).exec();
+            if (categoryCount > 0 && categoryCount === cardData.categories.length) {
+                let card = new Card(cardData);
+                await card.save();
+                Card.populate(card, {path: 'categories'}, callback);
             } else {
-                callback(new Error('Please check the categoryId field'));
+                callback(new Error('Please check the categories field'));
             }
         } catch (err) {
             callback(err);
@@ -130,21 +129,21 @@ export function saveCard(CardData, tags, callback) {
 /**
  * Update Card data
  * @param queryObj
- * @param CardData
+ * @param cardData
  * @param callback
  */
-export function updateCard(queryObj, CardData, callback) {
+export function updateCard(queryObj, cardData, callback) {
     (async() => {
         try {
-            let categoryCount = await Category.count({_id: CardData.categoryId}).exec();
+            let categoryCount = await Category.count({_id: {$in: cardData.categories}}).exec();
             console.log("categoryCount " + categoryCount);
-            if (CardData.categoryId === undefined || CardData.categoryId === null || categoryCount > 0) {
-                Card.findOneAndUpdate(queryObj, {$set: CardData}, {new: true})
-                    .populate({path: 'tags'})
-                    .populate({path: 'owner', select: {password: 0}})
+            if (cardData.categories === undefined || cardData.categories === null
+                || (categoryCount > 0 && categoryCount === cardData.categories.length)) {
+                Card.findOneAndUpdate(queryObj, {$set: cardData}, {new: true})
+                    .populate({path: 'categories'})
                     .exec(callback);
             } else {
-                callback(new Error('Please check the categoryId field'));
+                callback(new Error('Please check the categories field'));
             }
         } catch (err) {
             callback(err);
@@ -154,11 +153,11 @@ export function updateCard(queryObj, CardData, callback) {
 
 /**
  * Delete Card by slug
- * @param slug slug from request
+ * @param queryObj slug from request
  * @param callback
  */
-export function deleteCardBySlug(slug, callback) {
-    Card.findOneAndRemove({slug: slug})
+export function deleteCardBySlug(queryObj, callback) {
+    Card.findOneAndRemove(queryObj)
         .exec(callback);
 }
 

@@ -22,7 +22,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-    let tags = req.body.tags === undefined ? [] : req.body.tags;
     let state = getCorrectState(req.body.state);
     let data = convertData(req.body, {
         title: {$get: true, $default: 'untitled'},
@@ -41,9 +40,10 @@ router.post('/', function (req, res) {
             $update: (value, objectData) => {
                 return slug(objectData.title) + '-' + makeId();
             }
-        }
+        },
+        categories: {$get: true}
     });
-    saveProduct(data, tags, (err, data) => {
+    saveProduct(data, (err, data) => {
         showResultToClient(err, data, res);
     })
 });
@@ -53,10 +53,9 @@ router.get('/:productKey', getProductBySlugOrIdRoute);
 router.put('/:productKey', function (req, res) {
     (async() => {
         var {productKey} = req.params;
-        let tags = req.body.tags === undefined ? [] : req.body.tags;
         let isValid = isObjectId(productKey);
-        let queryObj = isValid ? {_id: productKey, owner: req.user._id} : {slug: productKey, owner: req.user._id};
-        let state = await getCorrectStateAsync(req.body.state);
+        let queryObj = isValid ? {_id: productKey} : {slug: productKey};
+        let state = await getCorrectStateAsync(req.body.state, queryObj);
         let data = convertData(req.body, {
             title: {$get: true},
             description: {$get: true},
@@ -69,9 +68,10 @@ router.put('/:productKey', function (req, res) {
                 $update: (value, objectData) => {
                     return objectData.title ? slug(objectData.title, ' ') : value;
                 }
-            }
+            },
+            categories: {$get: true}
         });
-        updateProduct(queryObj, data, tags, (err, data) => {
+        updateProduct(queryObj, data, (err, data) => {
             showResultToClient(err, data, res);
         });
     })();
@@ -79,7 +79,9 @@ router.put('/:productKey', function (req, res) {
 
 router.delete('/:productKey', function (req, res) {
     var {productKey} = req.params;
-    deleteProductBySlug(productKey, (err, data) => {
+    let isValid = isObjectId(productKey);
+    let queryObj = isValid ? {_id: productKey} : {slug: productKey};
+    deleteProductBySlug(queryObj, (err, data) => {
         showResultToClient(err, data, res);
     });
 });

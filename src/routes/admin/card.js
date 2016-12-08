@@ -22,7 +22,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-    let tags = req.body.tags === undefined ? [] : req.body.tags;
     let state = getCorrectState(req.body.state);
     let data = convertData(req.body, {
         title: {$get: true, $default: 'untitled'},
@@ -41,22 +40,22 @@ router.post('/', function (req, res) {
             $update: (value, objectData) => {
                 return slug(objectData.title) + '-' + makeId();
             }
-        }
+        },
+        categories: {$get: true}
     });
-    saveCard(data, tags, (err, data) => {
+    saveCard(data, (err, data) => {
         showResultToClient(err, data, res);
     })
 });
 
-router.get('/:productKey', getCardBySlugOrIdRoute);
+router.get('/:cardKey', getCardBySlugOrIdRoute);
 
-router.put('/:productKey', function (req, res) {
+router.put('/:cardKey', function (req, res) {
     (async() => {
-        var {productKey} = req.params;
-        let tags = req.body.tags === undefined ? [] : req.body.tags;
-        let isValid = isObjectId(productKey);
-        let queryObj = isValid ? {_id: productKey, owner: req.user._id} : {slug: productKey, owner: req.user._id};
-        let state = await getCorrectStateAsync(req.body.state);
+        var {cardKey} = req.params;
+        let isValid = isObjectId(cardKey);
+        let queryObj = isValid ? {_id: cardKey} : {slug: cardKey};
+        let state = await getCorrectStateAsync(req.body.state, queryObj);
         let data = convertData(req.body, {
             title: {$get: true},
             description: {$get: true},
@@ -69,17 +68,20 @@ router.put('/:productKey', function (req, res) {
                 $update: (value, objectData) => {
                     return objectData.title ? slug(objectData.title, ' ') : value;
                 }
-            }
+            },
+            categories: {$get: true}
         });
-        updateCard(queryObj, data, tags, (err, data) => {
+        updateCard(queryObj, data, (err, data) => {
             showResultToClient(err, data, res);
         });
     })();
 });
 
-router.delete('/:productKey', function (req, res) {
-    var {productKey} = req.params;
-    deleteCardBySlug(productKey, (err, data) => {
+router.delete('/:cardKey', function (req, res) {
+    var {cardKey} = req.params;
+    let isValid = isObjectId(cardKey);
+    let queryObj = isValid ? {_id: cardKey} : {slug: cardKey};
+    deleteCardBySlug(queryObj, (err, data) => {
         showResultToClient(err, data, res);
     });
 });
