@@ -20,4 +20,4 @@ var productSchema = new mongoose.Schema({
 productSchema.set('toJSON', {virtuals: true});
 productSchema.index({searchField: 1}, {unique: false});
 
-export default mongoose.model('product', productSchema);
+export default mongoose.model('products', productSchema);
