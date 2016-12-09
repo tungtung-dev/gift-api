@@ -9,4 +9,6 @@ import transactionRoute from './transaction';
 import cardRoute from './card';
 import authRoute from './authRoute';
 
-export default {userRoute, commonRoute, categoryRoute, productRoute, transactionRoute, cardRoute, authRoute}
+export default {
+    userRoute, commonRoute, categoryRoute, productRoute, transactionRoute, cardRoute, authRoute
+}

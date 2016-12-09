@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import config from "../config";
+import {selectUser} from "../dao/userDao";
 import {getUserInfo} from "../dao/userDao";
 
 const AUTHORIZATION_START_POSITION = 4;

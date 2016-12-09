@@ -35,18 +35,16 @@ export default class AuthSocial {
     fetchUserFacebook(callback) {
         fetch(`https://graph.facebook.com/v2.7/me?access_token=${this.token}&fields=id,email,birthday,name,gender,picture.type(large){url}`)
             .then(data => data.json())
-            .then((userSocial)=> {
-                if (userSocial.error) {
-                    callback(userSocial.error);
-
+            .then((userRes)=> {
+                if (userRes.error) {
+                    callback(userRes.error);
                 } else {
-                    let user = Object.assign(
-                        userSocial,
-                        {
-                            avatar_url: userSocial.picture.data.url
-                        }
-                    );
-                    callback(null, user);
+                    console.log(userRes);
+                    let userSocial = {
+                        ...userRes,
+                        avatar_url: userRes.picture.data.url
+                    };
+                    callback(null, userSocial);
                 }
             })
     }
