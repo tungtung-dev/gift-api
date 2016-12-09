@@ -9,3 +9,5 @@ dist
 
 # user upload
 public
+
+.DS_Store
