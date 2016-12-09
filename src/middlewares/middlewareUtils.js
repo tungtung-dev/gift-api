@@ -47,7 +47,7 @@ export function checkNormalUser(token, callback) {
                         if (!err && user) {
                             callback(null, user);
                         } else {
-                            callback(new Error(`Not Super admin user`));
+                            callback(new Error(`Not find user`));
                         }
                     });
                 })();
