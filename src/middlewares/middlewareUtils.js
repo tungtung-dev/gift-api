@@ -48,7 +48,37 @@ export function checkNormalUser(token, callback) {
                         if (!err && user) {
                             callback(null, user);
                         } else {
-                            callback(new Error(`Not Super admin user`));
+                            callback(new Error(`Not find user`));
+                        }
+                    });
+                })();
+            }
+        });
+    } else {
+        callback(new Error(`No token provided`));
+    }
+}
+
+/**
+ * Checking if it is Super admin
+ * @param token
+ * @param callback
+ */
+export function checkAdminUser(token, callback) {
+    // Verify given token and get payload data
+    if (token) {
+        jwt.verify(token, config.secret, (err, payload) => {
+            if (err) {
+                callback(err);
+            } else {
+                (async() => {
+                    // Query user by payload data
+                    let queryObj = {_id: payload._doc._id, superAdmin: true};
+                    getUserInfo(queryObj, (err, user) => {
+                        if (!err && user) {
+                            callback(null, user);
+                        } else {
+                            callback(new Error(`Not find user`));
                         }
                     });
                 })();

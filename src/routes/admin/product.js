@@ -8,10 +8,11 @@ import {getProductBySlugOrIdRoute} from "../user/product";
 import {productState} from "../../utils/constants";
 import slug from "slug";
 import {isObjectId} from "../../utils/objectIdUtils";
+import {adminAuthMiddleware} from "../../middlewares/adminAuthMiddleware";
 
 var router = express.Router();
 
-router.get('/', function (req, res) {
+router.get('/', adminAuthMiddleware, function (req, res) {
     let query = req.query;
     let {categoryId} = query;
     let states = query.state !== undefined ? query.state.split(',') : [productState.PUBLIC, productState.DRAFT, productState.TRASH];
@@ -21,7 +22,7 @@ router.get('/', function (req, res) {
     });
 });
 
-router.post('/', function (req, res) {
+router.post('/', adminAuthMiddleware, function (req, res) {
     let state = getCorrectState(req.body.state);
     let data = convertData(req.body, {
         title: {$get: true, $default: 'untitled'},
@@ -48,9 +49,9 @@ router.post('/', function (req, res) {
     })
 });
 
-router.get('/:productKey', getProductBySlugOrIdRoute);
+router.get('/:productKey', adminAuthMiddleware, getProductBySlugOrIdRoute);
 
-router.put('/:productKey', function (req, res) {
+router.put('/:productKey', adminAuthMiddleware, function (req, res) {
     (async() => {
         var {productKey} = req.params;
         let isValid = isObjectId(productKey);
@@ -77,7 +78,7 @@ router.put('/:productKey', function (req, res) {
     })();
 });
 
-router.delete('/:productKey', function (req, res) {
+router.delete('/:productKey', adminAuthMiddleware, function (req, res) {
     var {productKey} = req.params;
     let isValid = isObjectId(productKey);
     let queryObj = isValid ? {_id: productKey} : {slug: productKey};

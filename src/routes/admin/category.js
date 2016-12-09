@@ -5,12 +5,13 @@ import {saveCategory, updateCategory, deleteCategory} from "../../dao/categoryDa
 import {showResultToClient} from "../../utils/responseUtils";
 import {isObjectId} from "../../utils/objectIdUtils";
 import slug from 'slug';
+import {adminAuthMiddleware} from "../../middlewares/adminAuthMiddleware";
 
 var router = express.Router();
 
-router.get('/', getPaginatedCategoriesRoute);
+router.get('/', adminAuthMiddleware, getPaginatedCategoriesRoute);
 
-router.post('/', function (req, res) {
+router.post('/', adminAuthMiddleware, function (req, res) {
     let data = convertData(req.body, {
         name: {$get: true, $default: "untitled"},
         slug: {
@@ -29,11 +30,11 @@ router.post('/', function (req, res) {
     });
 });
 
-router.get('/without-pagination', getAllCategoriesRoute);
+router.get('/without-pagination', adminAuthMiddleware, getAllCategoriesRoute);
 
-router.get('/:categoryKey', getCategoryRoute);
+router.get('/:categoryKey', adminAuthMiddleware, getCategoryRoute);
 
-router.put('/:categoryKey', function (req, res) {
+router.put('/:categoryKey', adminAuthMiddleware, function (req, res) {
     let {categoryKey} = req.params;
     let isId = isObjectId(categoryKey);
     let queryObj = isId ? {_id: categoryKey} : {slug: categoryKey};
@@ -56,7 +57,7 @@ router.put('/:categoryKey', function (req, res) {
     });
 });
 
-router.delete('/:categoryKey', function (req, res) {
+router.delete('/:categoryKey', adminAuthMiddleware, function (req, res) {
     let {categoryKey} = req.params;
     let isId = isObjectId(categoryKey);
     let queryObj = isId ? {_id: categoryKey} : {slug: categoryKey};
