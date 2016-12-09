@@ -8,10 +8,11 @@ import {convertData, makeId} from "common-helper";
 import {isObjectId} from "../../utils/objectIdUtils";
 import {getCardBySlugOrIdRoute} from "../user/card";
 import slug from "slug";
+import {adminAuthMiddleware} from "../../middlewares/adminAuthMiddleware";
 
 var router = express.Router();
 
-router.get('/', function (req, res) {
+router.get('/', adminAuthMiddleware, function (req, res) {
     let query = req.query;
     let {categoryId} = query;
     let states = query.state !== undefined ? query.state.split(',') : [productState.PUBLIC, productState.DRAFT, productState.TRASH];
@@ -21,7 +22,7 @@ router.get('/', function (req, res) {
     });
 });
 
-router.post('/', function (req, res) {
+router.post('/', adminAuthMiddleware, function (req, res) {
     let state = getCorrectState(req.body.state);
     let data = convertData(req.body, {
         title: {$get: true, $default: 'untitled'},
@@ -48,9 +49,9 @@ router.post('/', function (req, res) {
     })
 });
 
-router.get('/:cardKey', getCardBySlugOrIdRoute);
+router.get('/:cardKey', adminAuthMiddleware, getCardBySlugOrIdRoute);
 
-router.put('/:cardKey', function (req, res) {
+router.put('/:cardKey', adminAuthMiddleware, function (req, res) {
     (async() => {
         var {cardKey} = req.params;
         let isValid = isObjectId(cardKey);
@@ -77,7 +78,7 @@ router.put('/:cardKey', function (req, res) {
     })();
 });
 
-router.delete('/:cardKey', function (req, res) {
+router.delete('/:cardKey', adminAuthMiddleware, function (req, res) {
     var {cardKey} = req.params;
     let isValid = isObjectId(cardKey);
     let queryObj = isValid ? {_id: cardKey} : {slug: cardKey};
