@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import config from "../config";
 import {selectUser} from "../dao/userDao";
+import {getUserInfo} from "../dao/userDao";
 
 const AUTHORIZATION_START_POSITION = 4;
 
@@ -23,9 +24,8 @@ export function getTokenFromAuthorization(req) {
  * @returns {*}
  */
 export function getToken(req) {
-    var token = req.body.token || req.session.token || req.query.userToken || req.headers['x-access-token']
+    var token = req.body.token || req.query.userToken || req.headers['x-access-token']
         || getTokenFromAuthorization(req);
-
     return token;
 }
 
@@ -44,7 +44,7 @@ export function checkNormalUser(token, callback) {
                 (async() => {
                     // Query user by payload data
                     let queryObj = {_id: payload._doc._id};
-                    selectUser(queryObj, (err, user) => {
+                    getUserInfo(queryObj, (err, user) => {
                         if (!err && user) {
                             callback(null, user);
                         } else {

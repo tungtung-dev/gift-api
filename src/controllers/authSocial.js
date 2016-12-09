@@ -116,7 +116,7 @@ export default class AuthSocial {
                             createdAt: new Date(),
                             [keySocialID]: userInfo.id
                         }
-                    }, {new: true}).exec();
+                    }, {upsert: true, new: true}).exec();
                 let {token, userFromToken} = createTokenAndGetUser(userUpdated);
                 callback(null, {user: userFromToken, success: true, token})
             } catch (err) {

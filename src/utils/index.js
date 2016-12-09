@@ -31,6 +31,6 @@ export function createTokenAndGetUser(user) {
     });
     return {
         token,
-        user: user
+        userFromToken: user
     };
 }
