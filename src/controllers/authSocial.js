@@ -38,14 +38,15 @@ export default class AuthSocial {
             .then((userSocial)=> {
                 if (userSocial.error) {
                     callback(userSocial.error);
+
                 } else {
-                    let userSocial = Object.assign(
+                    let user = Object.assign(
                         userSocial,
                         {
                             avatar_url: userSocial.picture.data.url
                         }
                     );
-                    callback(null, userSocial);
+                    callback(null, user);
                 }
             })
     }
@@ -117,7 +118,7 @@ export default class AuthSocial {
                             createdAt: new Date(),
                             [keySocialID]: userInfo.id
                         }
-                    }, {new: true}).exec();
+                    }, {upsert: true, new: true}).exec();
                 let {token, userFromToken} = createTokenAndGetUser(userUpdated);
                 callback(null, {user: userFromToken, success: true, token})
             } catch (err) {

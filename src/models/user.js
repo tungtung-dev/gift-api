@@ -23,4 +23,4 @@ var userSchema = new Schema({
 
 userSchema.set('toJSON', {virtuals: true});
 
-export default mongoose.model('product', userSchema);
+export default mongoose.model('user', userSchema);
