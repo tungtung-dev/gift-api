@@ -23,7 +23,7 @@ router.post('/login', (req, res) => {
 router.get('/profile', authMiddleware, (req, res) => {
     let queryObj = {_id: req.user._id};
     getUserInfo(queryObj, (err, user) => {
-        showResultToClient(err, user, res);
+        showResultToClient(err, {...user._doc, token: req.token}, res);
     });
 });
 
