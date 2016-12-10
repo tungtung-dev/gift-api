@@ -4,12 +4,12 @@
     "name": "Giáng sinh",
     "slug": "giang-sinh",
     "index": "1",
-    "icon": "birthday-gift.png",
+    "icon": "images/carousels/chrismas-girl.png",
     "featuredImage": {
-      "image": "birthday-gift-featured.png"
+      "image": "images/carousels/chrismas-girl.png"
     },
     "secondaryFeaturedImage": {
-      "image": "birthday-gift-featured-2.png"
+      "image": "images/carousels/chrismas-girl.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
@@ -19,12 +19,12 @@
     "name": "Sinh nhật",
     "slug": "sinh-nhat",
     "index": "1",
-    "icon": "birthday-gift.png",
+    "icon": "public/images/categories/birthday.png",
     "featuredImage": {
-      "image": "birthday-gift-featured.png"
+      "image": "public/images/categories/birthday.png"
     },
     "secondaryFeaturedImage": {
-      "image": "birthday-gift-featured-2.png"
+      "image": "public/images/categories/birthday.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
@@ -34,42 +34,42 @@
     "name": "Kỷ niệm",
     "slug": "ky-niem",
     "index": "1",
-    "icon": "memory-gift.png",
+    "icon": "public/images/categories/memory.png",
     "featuredImage": {
-      "image": "memory-gift-featured.png"
+      "image": "public/images/categories/memory.png"
     },
     "secondaryFeaturedImage": {
-      "image": "memory-gift-featured-2.png"
+      "image": "public/images/categories/memory.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
     "createdAt": "2016-11-30T10:37:47.266Z"
   },
   {
-    "name": "Quà sinh nhật",
-    "slug": "qua-sinh-nhat",
+    "name": "Gia đình",
+    "slug": "gia-dinh",
     "index": "1",
-    "icon": "birthday-gift.png",
+    "icon": "public/images/categories/family.png",
     "featuredImage": {
-      "image": "birthday-gift-featured.png"
+      "image": "public/images/categories/family.png"
     },
     "secondaryFeaturedImage": {
-      "image": "birthday-gift-featured-2.png"
+      "image": "public/images/categories/family.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
     "createdAt": "2016-11-30T10:37:47.266Z"
   },
   {
-    "name": "08/03",
-    "slug": "08-03",
+    "name": "My love",
+    "slug": "my-love",
     "index": "2",
-    "icon": "08-03.png",
+    "icon": "images/categories/my-love.png",
     "featuredImage": {
-      "image": "08-03.png"
+      "image": "images/categories/my-love.png"
     },
     "secondaryFeaturedImage": {
-      "image": "08-03.png"
+      "image": "images/categories/my-love.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
@@ -79,12 +79,12 @@
     "name": "Nhà giáo Việt Nam",
     "slug": "nha-giao-viet-nam",
     "index": "1",
-    "icon": "nha-giao-viet-name.png",
+    "icon": "images/categories/teacher.png",
     "featuredImage": {
-      "image": "nha-giao-viet-name.png"
+      "image": "images/categories/teacher.png"
     },
     "secondaryFeaturedImage": {
-      "image": "nha-giao-viet-name.png"
+      "image": "images/categories/teacher.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
@@ -94,12 +94,12 @@
     "name": "Thích thì tặng",
     "slug": "thich-thi-tang",
     "index": "2",
-    "icon": "no-reason.png",
+    "icon": "images/categories/like-gift.png",
     "featuredImage": {
-      "image": "no-reason.png"
+      "image": "images/categories/like-gift.png"
     },
     "secondaryFeaturedImage": {
-      "image": "no-reason.png"
+      "image": "images/categories/like-gift.png"
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
