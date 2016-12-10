@@ -4,7 +4,6 @@
 import express from "express";
 import {createSuperAdmin} from "../../dao/userDao";
 import {showResultToClient} from "../../utils/responseUtils";
-import {adminAuthMiddleware} from "../../middlewares/adminAuthMiddleware";
 import {initCategories} from "../../dao/categoryDao";
 
 var router = express.Router();

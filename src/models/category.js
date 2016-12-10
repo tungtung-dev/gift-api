@@ -3,6 +3,7 @@
  */
 
 import mongoose from "mongoose";
+import config from "../config";
 
 var {Schema} = mongoose;
 
@@ -20,6 +21,11 @@ var categorySchema = new Schema({
 
 categorySchema.virtual('id').get(function () {
     return this._id;
+});
+
+categorySchema.virtual('imageURL').get(function () {
+
+    return config.domainPublic + '/' + this.icon;
 });
 
 categorySchema.set('toJSON', {virtuals: true});

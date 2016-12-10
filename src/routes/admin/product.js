@@ -24,28 +24,29 @@ router.get('/', adminAuthMiddleware, function (req, res) {
 
 router.post('/', adminAuthMiddleware, function (req, res) {
     let state = getCorrectState(req.body.state);
-    let data = convertData(req.body, {
-        title: {$get: true, $default: 'untitled'},
-        description: {$get: true},
-        content: {$get: true},
-        state: {$set: state},
-        featuredImage: {$get: true},
-        secondaryFeaturedImage: {$get: true},
-        customField: {$get: true},
-        searchField: {
-            $update: (value, objectData) => {
-                return slug(objectData.title, ' ');
-            }
-        },
-        slug: {
-            $update: (value, objectData) => {
-                return slug(objectData.title) + '-' + makeId();
-            }
-        },
-        categories: {$get: true}
-    });
-    saveProduct(data, (err, data) => {
-        showResultToClient(err, data, res);
+    let data = convertData(req.body,
+        {
+            title: {$get: true, $default: 'untitled'},
+            description: {$get: true},
+            content: {$get: true},
+            state: {$set: state},
+            featuredImage: {$get: true},
+            secondaryFeaturedImage: {$get: true},
+            customField: {$get: true},
+            searchField: {
+                $update: (value, objectData) => {
+                    return slug(objectData.title, ' ');
+                }
+            },
+            slug: {
+                $update: (value, objectData) => {
+                    return slug(objectData.title) + '-' + makeId();
+                }
+            },
+            categories: {$get: true}
+        });
+    saveProduct(data, (err, result) => {
+        showResultToClient(err, result, res);
     })
 });
 
