@@ -36,7 +36,7 @@ app.use('/categories', userRoute.categoryRoute);
 app.use('/products', userRoute.productRoute);
 app.use('/transactions', userRoute.transactionRoute);
 app.use('/cards', userRoute.cardRoute);
-app.use('/auth', userRoute.authRoute)
+app.use('/auth', userRoute.authRoute);
 
 // Admin routes
 app.use('/admin', adminRoute.commonRoute);
@@ -45,6 +45,7 @@ app.use('/admin/categories', adminRoute.categoryRoute);
 app.use('/admin/products', adminRoute.productRoute);
 app.use('/admin/transactions', adminRoute.transactionRoute);
 app.use('/admin/cards', adminRoute.cardRoute);
+app.use('/admin/setup', adminRoute.setupRoute);
 
 app.listen(config.port, () => {
     console.log(`App listening ${config.port}!!`);

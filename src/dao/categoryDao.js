@@ -3,6 +3,7 @@
  */
 import {Category} from '../models/index';
 import Pagination from 'pagination-js';
+import categories from '../mock/categories.json';
 
 /**
  * Get Categories with query and pagination
@@ -74,10 +75,33 @@ export function updateCategory(queryObj, category, callback) {
 }
 
 /**
- * 
+ *
  * @param queryObj
  * @param callback
  */
 export function deleteCategory(queryObj, callback) {
     Category.findOneAndRemove(queryObj).exec(callback);
+}
+
+/**
+ * Init Categories from
+ * @param callback
+ */
+export function initCategories(callback) {
+    (async() => {
+        try {
+            let countCategories = await Category.count({}).exec();
+            if (countCategories > 0 ) {
+                callback(new Error("The categories had already been initialized"));
+            } else {
+                for (let i = 0; i < categories.length; i++) {
+                    let dbObj = new Category(categories[i]);
+                    await dbObj.save();
+                }
+            }
+            callback(null, {message: "The categories have already been initialized"});
+        } catch (err){
+            callback(err);
+        }
+    })();
 }

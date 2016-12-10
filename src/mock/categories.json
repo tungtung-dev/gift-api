@@ -13,11 +13,9 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
-    "createdAt": "2016-11-30T10:37:47.266Z",
-    "id": "583eabfbb845615e5f84ecd6"
+    "createdAt": "2016-11-30T10:37:47.266Z"
   },
   {
-    "_id": "583eabfbb845615e5f84ecd6",
     "name": "Sinh nhật",
     "slug": "sinh-nhat",
     "index": "1",
@@ -30,11 +28,9 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
-    "createdAt": "2016-11-30T10:37:47.266Z",
-    "id": "583eabfbb845615e5f84ecd6"
+    "createdAt": "2016-11-30T10:37:47.266Z"
   },
   {
-    "_id": "583eabfbb845615e5f84ecd6",
     "name": "Kỷ niệm",
     "slug": "ky-niem",
     "index": "1",
@@ -47,11 +43,9 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
-    "createdAt": "2016-11-30T10:37:47.266Z",
-    "id": "583eabfbb845615e5f84ecd6"
+    "createdAt": "2016-11-30T10:37:47.266Z"
   },
   {
-    "_id": "583eabfbb845615e5f84ecd6",
     "name": "Quà sinh nhật",
     "slug": "qua-sinh-nhat",
     "index": "1",
@@ -64,11 +58,9 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
-    "createdAt": "2016-11-30T10:37:47.266Z",
-    "id": "583eabfbb845615e5f84ecd6"
+    "createdAt": "2016-11-30T10:37:47.266Z"
   },
   {
-    "_id": "583eaaa91becd05e27067864",
     "name": "08/03",
     "slug": "08-03",
     "index": "2",
@@ -81,11 +73,9 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
-    "createdAt": "2016-11-30T10:32:09.029Z",
-    "id": "583eaaa91becd05e27067864"
+    "createdAt": "2016-11-30T10:32:09.029Z"
   },
   {
-    "_id": "583eaa9775c8055dfe401d5b",
     "name": "Nhà giáo Việt Nam",
     "slug": "nha-giao-viet-nam",
     "index": "1",
@@ -98,11 +88,9 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
-    "createdAt": "2016-11-30T10:31:51.525Z",
-    "id": "583eaa9775c8055dfe401d5b"
+    "createdAt": "2016-11-30T10:31:51.525Z"
   },
   {
-    "_id": "583eaaa91becd05e27067864",
     "name": "Thích thì tặng",
     "slug": "thich-thi-tang",
     "index": "2",
@@ -115,7 +103,6 @@
     },
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
-    "createdAt": "2016-11-30T10:32:09.029Z",
-    "id": "583eaaa91becd05e27067864"
+    "createdAt": "2016-11-30T10:32:09.029Z"
   }
 ]

@@ -20,6 +20,7 @@
     "nodemon": "^1.9.2"
   },
   "dependencies": {
+    "bcrypt": "^1.0.1",
     "body-parser": "~1.15.2",
     "common-helper": "^1.0.4",
     "cookie-parser": "~1.4.3",
