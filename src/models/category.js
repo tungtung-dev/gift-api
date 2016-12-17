@@ -15,6 +15,7 @@ var categorySchema = new Schema({
     featuredImage: {},
     secondaryFeaturedImage: {},
     customField: {},
+    featuredImageGroup: [],
     createdAt: {type: Date, default: Date.now},
     updatedAt: {type: Date, default: Date.now}
 });

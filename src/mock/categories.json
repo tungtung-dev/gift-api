@@ -6,11 +6,39 @@
     "index": "1",
     "icon": "images/carousels/chrismas-girl.png",
     "featuredImage": {
-      "image": "images/carousels/chrismas-girl.png"
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/carousels/chrismas-girl.png"
+      "id": "def",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
     "createdAt": "2016-11-30T10:37:47.266Z"
@@ -21,11 +49,39 @@
     "index": "1",
     "icon": "images/categories/birthday.png",
     "featuredImage": {
-      "image": "images/categories/birthday.png"
+      "id": "abc",
+      "type": "image",
+      "name": "birthday",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/birthday.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/birthday.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/categories/birthday.png"
+      "id": "abc",
+      "type": "image",
+      "name": "birthday",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/birthday.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/birthday.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
     "createdAt": "2016-11-30T10:37:47.266Z"
@@ -36,11 +92,39 @@
     "index": "1",
     "icon": "images/categories/memory.png",
     "featuredImage": {
-      "image": "images/categories/memory.png"
+      "id": "abc",
+      "type": "image",
+      "name": "memory",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/memory.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/memory.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/categories/memory.png"
+      "id": "abc",
+      "type": "image",
+      "name": "memory",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/memory.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/memory.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
     "createdAt": "2016-11-30T10:37:47.266Z"
@@ -51,11 +135,39 @@
     "index": "1",
     "icon": "images/categories/family.png",
     "featuredImage": {
-      "image": "images/categories/family.png"
+      "id": "abc",
+      "type": "image",
+      "name": "family",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/family.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/family.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/categories/family.png"
+      "id": "abc",
+      "type": "image",
+      "name": "family",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/family.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/family.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.977Z",
     "createdAt": "2016-11-30T10:37:47.266Z"
@@ -66,11 +178,39 @@
     "index": "2",
     "icon": "images/categories/my-love.png",
     "featuredImage": {
-      "image": "images/categories/my-love.png"
+      "id": "abc",
+      "type": "image",
+      "name": "my love",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/my-love.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/my-love.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/categories/my-love.png"
+      "id": "abc",
+      "type": "image",
+      "name": "my love",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/my-love.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/my-love.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
     "createdAt": "2016-11-30T10:32:09.029Z"
@@ -81,11 +221,39 @@
     "index": "1",
     "icon": "images/categories/teacher.png",
     "featuredImage": {
-      "image": "images/categories/teacher.png"
+      "id": "abc",
+      "type": "image",
+      "name": "teacher",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/teacher.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/teacher.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/categories/teacher.png"
+      "id": "abc",
+      "type": "image",
+      "name": "teacher",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/teacher.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/teacher.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
     "createdAt": "2016-11-30T10:31:51.525Z"
@@ -96,11 +264,39 @@
     "index": "2",
     "icon": "images/categories/like-gift.png",
     "featuredImage": {
-      "image": "images/categories/like-gift.png"
+      "id": "abc",
+      "type": "image",
+      "name": "Give whenever you want",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+      "checked": true
     },
     "secondaryFeaturedImage": {
-      "image": "images/categories/like-gift.png"
+      "id": "abc",
+      "type": "image",
+      "name": "Give whenever you want",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+      "checked": true
     },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
     "customField": "customField",
     "updatedAt": "2016-12-05T07:11:20.980Z",
     "createdAt": "2016-11-30T10:32:09.029Z"
