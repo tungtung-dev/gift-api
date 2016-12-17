@@ -18,8 +18,10 @@ var orderSchema = new mongoose.Schema({
         lastName: {type: String, require: true},
         firstName: {type: String, require: true}
     },
+    totalPrice: {type: Number},
     user: {type: Schema.ObjectId, ref: 'user'},
     state: {type: String},
+    products: [{type: Schema.ObjectId, ref: 'product'}],
     createdAt: {type: Date, default: Date.now},
     updatedAt: {type: Date, default: Date.now}
 });
