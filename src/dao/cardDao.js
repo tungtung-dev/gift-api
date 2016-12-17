@@ -23,7 +23,7 @@ export function countCards(query, callback) {
  */
 export function getCardBySlug(queryObj, callback) {
     Card.findOne(queryObj)
-        .populate({path: "owner", select: {password: 0}})
+        .populate({path: "owner categories", select: {password: 0}})
         .exec(callback);
 }
 
