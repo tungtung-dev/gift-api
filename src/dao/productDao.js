@@ -23,7 +23,7 @@ export function countProducts(query, callback) {
  */
 export function getProductBySlug(queryObj, callback) {
     Product.findOne(queryObj)
-        .populate({path: "owner", select: {password: 0}})
+        .populate({path: "owner categories", select: {password: 0}})
         .exec(callback);
 }
 
@@ -42,7 +42,7 @@ export function getProductsWithPagination(query, paginationInfo, orderBy, callba
             Product.find(query)
                 .skip(pagination.minIndex)
                 .limit(pagination.itemPerPage)
-                .populate({path: "owner", select: {password: 0}})
+                .populate({path: "owner categories", select: {password: 0}})
                 .sort(orderBy)
                 .exec((err, data) => {
                     callback(err, {data, pagination});
