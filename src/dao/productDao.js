@@ -5,6 +5,7 @@ import {Product, Category} from "../models/index";
 import Pagination from "pagination-js";
 import {ProductState} from "utils/constants";
 import {isObjectId} from "utils/objectIdUtils";
+import products from '../mock/products.json';
 
 /**
  * Count Product by query
@@ -159,5 +160,26 @@ export function updateProduct(queryObj, productData, callback) {
 export function deleteProductBySlug(queryObj, callback) {
     Product.findOneAndRemove(queryObj)
         .exec(callback);
+}
+
+/**
+ * Init Categories from
+ * @param callback
+ */
+export async function initProducts(callback) {
+    try {
+        let countProducts = await Product.count({}).exec();
+        if (countProducts > 0) {
+            callback(new Error("The products had already been initialized"));
+        } else {
+            for (let i = 0; i < products.length; i++) {
+                let dbObj = new Product(products[i]);
+                await dbObj.save();
+            }
+        }
+        callback(null, {message: "The products have already been initialized"});
+    } catch (err) {
+        callback(err);
+    }
 }
 
