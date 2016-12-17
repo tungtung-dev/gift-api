@@ -34,7 +34,7 @@ app.use('/', userRoute.commonRoute);
 app.use('/users', userRoute.userRoute);
 app.use('/categories', userRoute.categoryRoute);
 app.use('/products', userRoute.productRoute);
-app.use('/transactions', userRoute.transactionRoute);
+app.use('/orders', userRoute.orderRoute);
 app.use('/cards', userRoute.cardRoute);
 app.use('/auth', userRoute.authRoute);
 
@@ -43,7 +43,7 @@ app.use('/admin', adminRoute.commonRoute);
 app.use('/admin/users', adminRoute.userRoute);
 app.use('/admin/categories', adminRoute.categoryRoute);
 app.use('/admin/products', adminRoute.productRoute);
-app.use('/admin/transactions', adminRoute.transactionRoute);
+app.use('/admin/orders', adminRoute.orderRoute);
 app.use('/admin/cards', adminRoute.cardRoute);
 app.use('/admin/setup', adminRoute.setupRoute);
 

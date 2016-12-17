@@ -2,10 +2,10 @@
  * Created by Tien Nguyen on 11/22/16.
  */
 
-export const transactionState = {
-    DRAFT: "trans_state_draft",
-    PUBLIC: "trans_state_draft",
-    TRASH: "trans_state_draft"
+export const orderState = {
+    NEED_TO_VERIFIED: "order_state_need_to_verified",
+    VERIFIED: "order_state_verified",
+    REJECTED: "order_state_rejected"
 };
 
 
