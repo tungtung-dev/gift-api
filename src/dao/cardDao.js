@@ -5,6 +5,7 @@ import {Card, Category} from "../models/index";
 import Pagination from "pagination-js";
 import {CardState} from "utils/constants";
 import {isObjectId} from "utils/objectIdUtils";
+import cards from '../mock/cards.json';
 
 /**
  * Count Card by query
@@ -161,3 +162,23 @@ export function deleteCardBySlug(queryObj, callback) {
         .exec(callback);
 }
 
+/**
+ * Init Categories from
+ * @param callback
+ */
+export async function initCards(callback) {
+    try {
+        let countProducts = await Card.count({}).exec();
+        if (countProducts > 0) {
+            callback(new Error("The products had already been initialized"));
+        } else {
+            for (let i = 0; i < cards.length; i++) {
+                let dbObj = new Card(cards[i]);
+                await dbObj.save();
+            }
+        }
+        callback(null, {message: "The products have already been initialized"});
+    } catch (err) {
+        callback(err);
+    }
+}

@@ -3,11 +3,23 @@ import {productState} from "../utils/constants";
 var Schema = mongoose.Schema;
 
 var orderSchema = new mongoose.Schema({
-    title: {type: String, required: true},
-    address: {type: String, required: true},
-    description: {type: String},
-    state: {type: String, default: productState.DRAFT},
-    customer: [{type: Schema.ObjectId, ref: 'user'}],
+    receiverInfo: {
+        name: {type: String, require: true},
+        phone: {type: String, require: true},
+        address: {type: String, require: true},
+        time: {type: Date, default: Date.now},
+        message: {type: String},
+        card: {type: Schema.ObjectId, ref: 'card'}
+    },
+    cardInfo: {
+        number: {type: String, require: true},
+        expires: {type: String, require: true},
+        ccv: {type: String, require: true},
+        lastName: {type: String, require: true},
+        firstName: {type: String, require: true}
+    },
+    user: {type: Schema.ObjectId, ref: 'user'},
+    state: {type: String},
     createdAt: {type: Date, default: Date.now},
     updatedAt: {type: Date, default: Date.now}
 });

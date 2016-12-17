@@ -6,6 +6,7 @@ import {createSuperAdmin} from "../../dao/userDao";
 import {showResultToClient} from "../../utils/responseUtils";
 import {initCategories} from "../../dao/categoryDao";
 import {initProducts} from "../../dao/productDao";
+import {initCards} from "../../dao/cardDao";
 
 var router = express.Router();
 
@@ -17,6 +18,12 @@ router.get('/init-categories', (req, res) => {
 
 router.get('/init-products', (req, res) => {
     initProducts((err, data)=> {
+       showResultToClient(err, data, res);
+    });
+});
+
+router.get('/init-cards', (req, res) => {
+    initCards((err, data)=> {
        showResultToClient(err, data, res);
     });
 });

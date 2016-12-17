@@ -5,10 +5,10 @@ import userRoute from './users';
 import commonRoute from './common';
 import categoryRoute from './category';
 import productRoute from './product';
-import transactionRoute from './transaction';
+import orderRoute from './order';
 import cardRoute from './card';
 import authRoute from './authRoute';
 
 export default {
-    userRoute, commonRoute, categoryRoute, productRoute, transactionRoute, cardRoute, authRoute
+    userRoute, commonRoute, categoryRoute, productRoute, orderRoute, cardRoute, authRoute
 }
