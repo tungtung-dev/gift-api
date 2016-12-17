@@ -8,8 +8,8 @@ import userRoute from './routes/user/index';
 import adminRoute from './routes/admin/index';
 
 var app = express();
-mongoose.connect(config.database);
-//mongoose.connect(config.database, config.dbOptions);
+// mongoose.connect(config.database);
+mongoose.connect(config.database, config.dbOptions);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true, limit: '100mb'}));
