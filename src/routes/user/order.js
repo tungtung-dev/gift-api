@@ -34,11 +34,21 @@ router.post('/', authMiddleware, (req, res) => {
         lastName: {$get: true},
         firstName: {$get: true}
     });
+
+    let products = req.body.products;
+    let productIds = [];
+    let totalPrice = 0;
+    for (let i = 0; i < products.length; i++) {
+        productIds.push(products[i]._id);
+        totalPrice += parseFloat(products[i].price);
+    }
     let order = {
         receiverInfo: receiverInfo,
         cardInfo: cardInfo,
         user: req.user._id,
-        state: orderState.NEED_TO_VERIFIED
+        state: orderState.NEED_TO_VERIFIED,
+        products: productIds,
+        totalPrice: totalPrice
     };
     saveOrder(order, (err, data) => {
         showResultToClient(err, data, res);
