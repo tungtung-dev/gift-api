@@ -1,254 +1,303 @@
-{
-  "data": [
-    {
-      "_id": "583eabfbb845615e5f84ecd6",
-      "name": "Giáng sinh",
-      "slug": "giang-sinh",
-      "icon": "birthday-gift.png",
-      "featuredImage": {
-        "image": "birthday-gift-featured.png"
-      },
-      "secondaryFeaturedImage": {
-        "image": "birthday-gift-featured-2.png"
-      },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.977Z",
-      "createdAt": "2016-11-30T10:37:47.266Z",
-      "categories": [
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Giáng sinh",
-          "slug": "giang-sinh",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        },
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Sinh nhật",
-          "slug": "sinh-nhat",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        }
-      ],
-      "id": "583eabfbb845615e5f84ecd6"
+[
+  {
+    "title": "Giáng sinh",
+    "slug": "giang-sinh",
+    "searchField": "giang sinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "birthday-gift.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
-    {
-      "_id": "583eabfbb845615e5f84ecd6",
-      "name": "Sinh nhật",
-      "slug": "sinh-nhat",
-      "icon": "birthday-gift.png",
-      "featuredImage": {
-        "image": "birthday-gift-featured.png"
-      },
-      "secondaryFeaturedImage": {
-        "image": "birthday-gift-featured-2.png"
-      },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.977Z",
-      "createdAt": "2016-11-30T10:37:47.266Z",
-      "categories": [
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Giáng sinh",
-          "slug": "giang-sinh",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        }
-      ],
-      "id": "583eabfbb845615e5f84ecd6"
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
-    {
-      "_id": "583eabfbb845615e5f84ecd6",
-      "name": "Kỷ niệm",
-      "slug": "ky-niem",
-      "icon": "memory-gift.png",
-      "featuredImage": {
-        "image": "memory-gift-featured.png"
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
       },
-      "secondaryFeaturedImage": {
-        "image": "memory-gift-featured-2.png"
-      },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.977Z",
-      "createdAt": "2016-11-30T10:37:47.266Z",
-      "categories": [
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Giáng sinh",
-          "slug": "giang-sinh",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        }
-      ],
-      "id": "583eabfbb845615e5f84ecd6"
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
+  },
+  {
+    "title": "Sinh nhật",
+    "slug": "sinh-nhat",
+    "searchField": "giangsinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "birthday-gift.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
-    {
-      "_id": "583eabfbb845615e5f84ecd6",
-      "name": "Quà sinh nhật",
-      "slug": "qua-sinh-nhat",
-      "icon": "birthday-gift.png",
-      "featuredImage": {
-        "image": "birthday-gift-featured.png"
-      },
-      "secondaryFeaturedImage": {
-        "image": "birthday-gift-featured-2.png"
-      },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.977Z",
-      "createdAt": "2016-11-30T10:37:47.266Z",
-      "categories": [
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Giáng sinh",
-          "slug": "giang-sinh",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        }
-      ],
-      "id": "583eabfbb845615e5f84ecd6"
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
-    {
-      "_id": "583eaaa91becd05e27067864",
-      "name": "08/03",
-      "slug": "08-03",
-      "icon": "08-03.png",
-      "featuredImage": {
-        "image": "08-03.png"
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
       },
-      "secondaryFeaturedImage": {
-        "image": "08-03.png"
-      },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.980Z",
-      "createdAt": "2016-11-30T10:32:09.029Z",
-      "id": "583eaaa91becd05e27067864"
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
+  },
+  {
+    "title": "Kỷ niệm",
+    "slug": "ky-niem",
+    "searchField": "giangsinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "memory-gift.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
-    {
-      "_id": "583eaa9775c8055dfe401d5b",
-      "name": "Nhà giáo Việt Nam",
-      "slug": "nha-giao-viet-nam",
-      "icon": "nha-giao-viet-name.png",
-      "featuredImage": {
-        "image": "nha-giao-viet-name.png"
-      },
-      "secondaryFeaturedImage": {
-        "image": "nha-giao-viet-name.png"
-      },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.980Z",
-      "createdAt": "2016-11-30T10:31:51.525Z",
-      "categories": [
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Giáng sinh",
-          "slug": "giang-sinh",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        }
-      ],
-      "id": "583eaa9775c8055dfe401d5b"
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
     },
-    {
-      "_id": "583eaaa91becd05e27067864",
-      "name": "Thích thì tặng",
-      "slug": "thich-thi-tang",
-      "icon": "no-reason.png",
-      "featuredImage": {
-        "image": "no-reason.png"
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
       },
-      "secondaryFeaturedImage": {
-        "image": "no-reason.png"
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
+  },
+  {
+    "title": "Quà sinh nhật",
+    "slug": "qua-sinh-nhat",
+    "searchField": "giangsinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "birthday-gift.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
       },
-      "customField": "customField",
-      "updatedAt": "2016-12-05T07:11:20.980Z",
-      "createdAt": "2016-11-30T10:32:09.029Z",
-      "categories": [
-        {
-          "_id": "583eabfbb845615e5f84ecd6",
-          "name": "Giáng sinh",
-          "slug": "giang-sinh",
-          "index": "1",
-          "icon": "birthday-gift.png",
-          "featuredImage": {
-            "image": "birthday-gift-featured.png"
-          },
-          "secondaryFeaturedImage": {
-            "image": "birthday-gift-featured-2.png"
-          },
-          "customField": "customField",
-          "updatedAt": "2016-12-05T07:11:20.977Z",
-          "createdAt": "2016-11-30T10:37:47.266Z",
-          "id": "583eabfbb845615e5f84ecd6"
-        }
-      ],
-      "id": "583eaaa91becd05e27067864"
-    }
-  ],
-  "pagination": {
-    "totalItem": 8,
-    "page": 1,
-    "itemPerPage": 10,
-    "minIndex": 0,
-    "maxIndex": 10
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
+  },
+  {
+    "title": "08/03",
+    "slug": "08-03",
+    "searchField": "giangsinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "08-03.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
+  },
+  {
+    "title": "Nhà giáo Việt Nam",
+    "slug": "nha-giao-viet-nam",
+    "searchField": "giangsinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "nha-giao-viet-title.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
+  },
+  {
+    "title": "Thích thì tặng",
+    "slug": "thich-thi-tang",
+    "searchField": "giangsinh",
+    "description": "Quà giáng sinh nè mấy gái!",
+    "content": "Mô tả",
+    "icon": "no-reason.png",
+    "featuredImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "secondaryFeaturedImage": {
+      "id": "abc",
+      "type": "image",
+      "name": "chrismas girl",
+      "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
+      "checked": true
+    },
+    "featuredImageGroup": [
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      },
+      {
+        "id": "abc",
+        "type": "image",
+        "name": "Give whenever you want",
+        "thumbnailUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "originalUrl": "http://188.166.255.80:4438/images/carousels/like-gift.png",
+        "checked": true
+      }
+    ],
+    "customField": "customField"
   }
-}
+]
