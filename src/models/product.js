@@ -8,6 +8,8 @@ var productSchema = new mongoose.Schema({
     searchField: {type: String, required: true},
     description: {type: String},
     content: {},
+    price: {type: Number},
+    currency: {type: String},
     state: {type: String, default: productState.DRAFT},
     customField: {},
     featuredImage: {},

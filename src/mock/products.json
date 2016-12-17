@@ -6,6 +6,8 @@
     "description": "Quà giáng sinh nè mấy gái!",
     "content": "Mô tả",
     "icon": "birthday-gift.png",
+    "price": 51000,
+    "currency": "VND",
     "featuredImage": {
       "id": "abc",
       "type": "image",
@@ -57,6 +59,8 @@
       "originalUrl": "http://188.166.255.80:4438/images/carousels/chrismas-girl.png",
       "checked": true
     },
+    "price": 51000,
+    "currency": "VND",
     "secondaryFeaturedImage": {
       "id": "abc",
       "type": "image",
@@ -92,6 +96,8 @@
     "description": "Quà giáng sinh nè mấy gái!",
     "content": "Mô tả",
     "icon": "memory-gift.png",
+    "price": 51000,
+    "currency": "VND",
     "featuredImage": {
       "id": "abc",
       "type": "image",
@@ -135,6 +141,8 @@
     "description": "Quà giáng sinh nè mấy gái!",
     "content": "Mô tả",
     "icon": "birthday-gift.png",
+    "price": 51000,
+    "currency": "VND",
     "featuredImage": {
       "id": "abc",
       "type": "image",
@@ -178,6 +186,8 @@
     "description": "Quà giáng sinh nè mấy gái!",
     "content": "Mô tả",
     "icon": "08-03.png",
+    "price": 51000,
+    "currency": "VND",
     "featuredImage": {
       "id": "abc",
       "type": "image",
@@ -221,6 +231,8 @@
     "description": "Quà giáng sinh nè mấy gái!",
     "content": "Mô tả",
     "icon": "nha-giao-viet-title.png",
+    "price": 51000,
+    "currency": "VND",
     "featuredImage": {
       "id": "abc",
       "type": "image",
@@ -264,6 +276,8 @@
     "description": "Quà giáng sinh nè mấy gái!",
     "content": "Mô tả",
     "icon": "no-reason.png",
+    "price": 51000,
+    "currency": "VND",
     "featuredImage": {
       "id": "abc",
       "type": "image",
